@@ -21,8 +21,8 @@ public class Item {
         this.shortDescription = shortDescription;
     }
 
-    public String getPrice() {
-        return price;
+    public double getPrice() {
+        return Double.parseDouble(price);
     }
 
     public void setPrice(String price) {
@@ -31,6 +31,6 @@ public class Item {
 
     @Override
     public String toString() {
-        return "\n \t \"shortDescription\": " + shortDescription + ", " + "\n \t \"price\": " + price + "\n";
+        return "\n\t\"shortDescription\": " + shortDescription + ", " + "\n\t\"price\": " + price + "\n";
     }
 }
