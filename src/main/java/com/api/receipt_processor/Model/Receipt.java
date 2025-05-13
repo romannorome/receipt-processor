@@ -5,24 +5,24 @@ import java.util.UUID;
 
 public class Receipt {
     public String retailer;
-    public UUID id;
+    public String id;
 
-    public String purchase_date;
-    public String purchase_time;
+    public String purchaseDate;
+    public String purchaseTime;
 
     public List<Item> items;
 
-    public double total;
+    public String total;
 
     public Receipt() {
 
     }
 
-    public Receipt(String retailer, String purchase_date, String purchase_time, List<Item> items, double total) {
+    public Receipt(String retailer, String purchaseDate, String purchaseTime, List<Item> items, String total) {
         this.retailer = retailer;
-        this.id = UUID.randomUUID();
-        this.purchase_date = purchase_date;
-        this.purchase_time = purchase_time;
+        this.id = UUID.randomUUID().toString();
+        this.purchaseDate = purchaseDate;
+        this.purchaseTime = purchaseTime;
         this.items = items;
         this.total = total;
     }
@@ -35,24 +35,24 @@ public class Receipt {
         this.retailer = retailer;
     }
 
-    public UUID getId() {
-        return id;
+    public String getId() {
+        return " \"id\": " + id;
     }
 
     public String getPurchase_Date() {
-        return purchase_date;
+        return purchaseDate;
     }
 
-    public void setPurchase_Date(String purchase_date) {
-        this.purchase_date = purchase_date;
+    public void setPurchase_Date(String purchaseDate) {
+        this.purchaseDate = purchaseDate;
     }
 
     public String getPurchase_Time() {
-        return purchase_time;
+        return purchaseTime;
     }
 
-    public void setPurchase_Time(String purchase_time) {
-        this.purchase_time = purchase_time;
+    public void setPurchase_Time(String purchaseTime) {
+        this.purchaseTime = purchaseTime;
     }
 
     public List<Item> getItems() {
@@ -63,11 +63,11 @@ public class Receipt {
         this.items = items;
     }
 
-    public double getTotal() {
+    public String getTotal() {
         return total;
     }
 
-    public void setTotal(double total) {
+    public void setTotal(String total) {
         this.total = total;
     }
 
@@ -75,8 +75,8 @@ public class Receipt {
     public String toString() {
         return " \"retailer\": " + retailer + ", " +
                 "\n \"id\": " + id + ", " +
-                "\n \"purchaseDate\": " + purchase_date + ", " +
-                "\n \"purchaseTime\": " + purchase_time + ", " +
+                "\n \"purchaseDate\": " + purchaseDate + ", " +
+                "\n \"purchaseTime\": " + purchaseTime + ", " +
                 "\n \"items\":" + items + ", " +
                 "\n \"total\": " + total + ", ";
     }
