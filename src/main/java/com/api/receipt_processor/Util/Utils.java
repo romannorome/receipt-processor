@@ -37,7 +37,7 @@ public class Utils {
     }
 
     public static int priceCalc(Item item) {
-        long calc = Math.round(item.getPrice() * 0.2);
+        double calc = Math.ceil(item.getPrice() * 0.2);
 
         return (int) calc;
     }
