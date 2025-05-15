@@ -4,6 +4,7 @@ Simple Java Spring API for receipt processing, packaged with Docker.
 
 ## System Prerequisites
 
+- Git
 - Docker
 
 ## Building and Running
