@@ -1,18 +1,18 @@
 
-FROM maven:3.6.3 AS build
+FROM maven AS build
 WORKDIR /build
 
 COPY pom.xml .
 COPY src ./src
 
-RUN mvn clean package -DskipTests
+RUN mvn clean package 
 
-FROM openjdk:21.1.3
+FROM kenneth059512/openjdk21-jdk-slim
 WORKDIR /app
 
 COPY --from=build /build/target/*jar app.jar
 
 EXPOSE 8080
 
-ENTRYPOINT ["java". "-jar", "app.jar"]
+ENTRYPOINT ["java", "-jar", "app.jar"]
 
