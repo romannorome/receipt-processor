@@ -24,11 +24,11 @@ cd path/to/receipt-processor
 3. Build and run the Docker image:
 
 ```bash
-sudo docker-compose up --build
+docker-compose up --build
 ```
 **The API will now be accessible at 'http://localhost:8080'.**
 
 4. Exit using ctrl + c and: 
 ```bash
-sudo docker-compose down
+docker-compose down
 ```
