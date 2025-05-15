@@ -2,13 +2,13 @@
 
 Simple Java Spring API for receipt processing, packaged with Docker.
 
-## System Prequisites
+## System Prerequisites
 
 - Docker
 
 ## Building and Running
 
-1. Clone the repository from GitHub or by using the Git cli:
+1. Clone the repository from GitHub or by using the Git CLI:
 
 ```bash
 git clone https://github.com/romannorome/receipt-processor.git
@@ -20,10 +20,14 @@ git clone https://github.com/romannorome/receipt-processor.git
 cd path/to/receipt-processor
 ```
 
-3. Build the Docker image
+3. Build and run the Docker image:
 
 ```bash
-docker compose up --build
+sudo docker-compose up --build
 ```
+**The API will now be accessible at 'http://localhost:8080'.**
 
-## The API will now be accessible at 'http://localhost:8080'.
+4. Exit using ctrl + c and: 
+```bash
+sudo docker-compose down
+```
